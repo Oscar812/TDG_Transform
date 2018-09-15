@@ -1,6 +1,5 @@
 import xml.etree.ElementTree as ET
-from operator import is_not
-from functools import partial
+import os
 import zlib
 import base64
 import urllib.parse
@@ -30,6 +29,7 @@ nodos= classes.Nodo_KRL();
 
 #matrimonio = open ('Matrimonio.xml', "rb")
 #tree = ET.parse( matrimonio )
+
 tree = ET.parse( '../Matrimonio.xml' )
 root = tree.getroot()
 
@@ -49,9 +49,17 @@ matrimonio = urldecode( sin_b )
 
 print (matrimonio)
 
-
 '''
+
 NO BORRAR
+
+if os.path.exists('KRL.xml'):
+    os.remove('KRL.xml')
+else:
+    f = open('matri.xml', 'w')
+    f.write(matrimonio)
+    f.close()
+
 f = open ('matri.xml' , 'w' ) NO BORRAR
 f.write(matrimonio) NO BORRAR
 f.close()  NO BORRAR
