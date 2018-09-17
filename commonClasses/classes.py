@@ -1,5 +1,21 @@
 #Mod de las clases common
 
+class NodoKRL:
+    Id = ''
+    Nombre = ''
+    Parent = ''
+
+    def getId(self):
+        return (self.Id)
+
+    def getNombre(self):
+        return (self.Nombre)
+
+    def getParent(self):
+        return (self.Parent)
+
+
+
 class Relacion_KRL:
   Nombre  =''
   Tipo    =''
